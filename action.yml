@@ -1,0 +1,25 @@
+name: 'Deploy to PeopleSoft'
+description: 'Deploy Web Assets to PeopleSoft'
+branding:
+  icon: 'external-link'
+  color: 'green'
+inputs:
+  FOLDER:
+    description: 'Folder Name in Repo Containing the Files to Deploy'
+    required: true
+    default: 'dist'
+  IB_URL:
+    description: 'Base Integration Broker URL - Ex: https://dev-ps.example.com'
+    required: true
+  NODE:
+    description: 'Default Local Node'
+    required: true
+  BASIC_AUTH_USERNAME:
+    description: 'Basic Auth User ID for Integration Broker Service Operation'
+    required: true
+  BASIC_AUTH_PASSWORD:
+    description: 'Basic Auth Password for Integration Broker Service Operation'
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

@@ -1,0 +1,28 @@
+{
+  "name": "deploy-to-ps-action",
+  "version": "1.0.0",
+  "description": "Deploy to PeopleSoft GitHub Action",
+  "main": "index.js",
+  "private": false,
+  "scripts": {
+    "build": "ncc build index.js -o dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coltonfischer/deploy-to-ps-action.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coltonfischer/deploy-to-ps-action/issues"
+  },
+  "homepage": "https://github.com/coltonfischer/deploy-to-ps-action#readme",
+  "dependencies": {
+    "@zeit/ncc": "^0.21.1",
+    "@actions/core": "^1.2.4",
+    "dotenv": "^6.0.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  }
+}
