@@ -4,7 +4,7 @@ A GitHub action to deploy web assets to PeopleSoft.
 
 Note: This action requires the [Deploy to PeopleSoft Handler](https://github.com/coltonfischer/deploy-to-ps-handler) to be installed on the PeopleSoft system.
 
-Exmaple Usage:
+Example Usage:
 ```
 on: [push]
 
