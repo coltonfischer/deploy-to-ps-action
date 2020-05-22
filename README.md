@@ -6,6 +6,8 @@ Note: This action requires the [Deploy to PeopleSoft Handler](https://github.com
 
 Exmaple Usage:
 ```
+on: [push]
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
