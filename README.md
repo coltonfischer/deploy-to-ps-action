@@ -1,11 +1,18 @@
 # Deploy to PeopleSoft Action
 
-A GitHub action to deploy web assets to PeopleSoft.  
+A GitHub action to deploy web assets to PeopleSoft.
 
-Note: This action requires the [Deploy to PeopleSoft Handler](https://github.com/coltonfischer/deploy-to-ps-handler) to be installed on the PeopleSoft system.
+## Prerequisites
 
-Example Usage:
-```
+- This action requires the [Deploy to PeopleSoft Handler](https://github.com/coltonfischer/deploy-to-ps-handler) to be installed on the PeopleSoft system.
+
+## Usage
+
+1. Set up the PeopleSoft environment Integration Broker details as secrets in your repository settings using `IB_URL`, `NODE`, `BASIC_AUTH_USERNAME`, `BASIC_AUTH_PASSWORD`
+
+2. Create a `.github/workflows/action.yml` file:
+
+```yml
 on: [push]
 
 jobs:
@@ -26,16 +33,16 @@ jobs:
           BASIC_AUTH_PASSWORD: ${{ secrets.BASIC_AUTH_PASSWORD }}
 ```
 
-### Input Arguments
+## Inputs
 
-|Argument|  Description  |  Default  |
+|Input|  Description  |  Usage  |
 |--------|---------------|-----------|
-| FOLDER | Folder Name in Repo Containing the Files to Deploy | dist |
-| IB_URL | Base Integration Broker URL - Ex: https://dev-ps.example.com | _required_ Field |
-| NODE | Default Local Node| _required_ Field |
-|  BASIC_AUTH_USERNAME | Basic Auth User ID for Integration Broker Service Operation| _required_ Field |
-|BASIC_AUTH_PASSWORD | Basic Auth Password for Integration Broker Service Operation| _required_ Field |
+| FOLDER | Folder Name in Repo Containing the Files to Deploy | Optional (default `dist`) |
+| IB_URL | Base Integration Broker URL - Ex: https://dev-ps.example.com | Required |
+| NODE | Default Local Node| Required |
+|  BASIC_AUTH_USERNAME | Basic Auth User ID for Integration Broker Service Operation| Required |
+|BASIC_AUTH_PASSWORD | Basic Auth Password for Integration Broker Service Operation| Required |
 
-### Supported File Types
+## Supported File Types
 
 - Only `.js`, `.css`, `.scss`, and `.html` file types will be deployed to PeopleSoft.
