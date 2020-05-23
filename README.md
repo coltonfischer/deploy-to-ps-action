@@ -23,7 +23,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Deploy to PeopleSoft Step
-        id: dps
         uses: coltonfischer/deploy-to-ps-action@v1.0.0
         with:
           FOLDER: 'dist'
