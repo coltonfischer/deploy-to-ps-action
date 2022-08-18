@@ -20,7 +20,7 @@
   "homepage": "https://github.com/coltonfischer/deploy-to-ps-action#readme",
   "dependencies": {
     "@zeit/ncc": "^0.21.1",
-    "@actions/core": "^1.2.4",
+    "@actions/core": "^1.9.1",
     "dotenv": "^6.0.0",
     "request": "^2.88.0",
     "request-promise": "^4.2.2"
